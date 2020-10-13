@@ -1,0 +1,112 @@
+<html background-image = url("a.jpg")>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+
+body, html {
+  height: 100%;
+}
+
+.bg { 
+  /* The image used */
+  background-image: url("http://hashtag-bg.com/wp-content/uploads/2018/08/cool-background-images-resume-57-backgrounds-free-jpeg-png-format-download.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+li{
+  list-style: none;
+}
+
+
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #2c3e50;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: #2c3e50;
+}
+.topnav a.active {
+  background-color: #2980b9;
+  color: white;
+}
+</style>
+</head>
+<body style="background-image: url('https://wallpapercave.com/wp/SMyrO7b.jpg'); background-size: cover; " >
+<div class="topnav">
+  <a class="active" href="/home">Home</a>
+  <a href="/contact">Contact </a>
+  <a href="/aboutus">About us</a>
+  <br>
+
+</div>
+
+
+
+
+
+</div>
+<center><h1 class="mt-3">CREATE YOUR OWN WORDCLOUD</h1></center>
+
+
+<form method = "POST"><br />
+  {% if form %}
+{% csrf_token %}
+     <center><h3> Enter Text: </h3><textarea style="background-color:#f0f0f0;" name="text" cols="100" rows="10" required id="id_text">
+</textarea></center>
+<center> <button class="btn btn-secondary mt-2"><a href="" style="color: #fff;">Reset</a></button></center>
+      <div class="px-5"><h1>Select Shape:</h1>
+      <ul id="id_maskType ">
+    <li><label style="font-size:30px;" for="id_maskType_0"><input type="radio" name="maskType" value="Type1" required id="id_maskType_0">
+ Square shape</label>
+
+</li>
+    <li><label style="font-size:30px;" for="id_maskType_1"><input type="radio" name="maskType" value="Type2" required id="id_maskType_1">
+ Heart shape</label>
+
+</li>
+    <li><label style="font-size:30px;" for="id_maskType_2"><input type="radio" name="maskType" value="Type3" required id="id_maskType_2">
+ Dimond shape</label></div>
+
+   <center><button style="font-size:30px;" type = "submit" class="btn btn-primary" >Create Word Cloud </button></center> 
+
+  {% endif %}
+</form>
+<div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html> 
