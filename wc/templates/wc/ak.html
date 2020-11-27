@@ -1,0 +1,155 @@
+{% load static %}
+<html background-image = url("a.jpg")>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'index.css' %}"">
+<title>Create | WordCloud</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+  <nav>
+    <input id="nav-toggle" type="checkbox">
+    <div class="logo">
+        <img src="{% static 'logo.svg' %}">
+    </div>
+    <ul class="links">
+        <li><a class="active" href="/home">Home</a></li>
+        <li><a  href="/aboutus">About us</a></li>
+        <li><a   href="/contact">Contact us</a></li>
+        <li><a href="/create"><button class="heading1">CREATE NOW</button></a></li>
+    </ul>
+    <label for="nav-toggle" class="icon-burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </label>
+</nav>
+
+</div>
+<center><h1 class="mt-3" style="margin-top: 20px;">CREATE YOUR OWN WORDCLOUD</h1></center>
+
+
+<form method = "POST"><br />
+  {% if form %}
+{% csrf_token %}
+     <div class="form__group field"><textarea class="form__field" name="text" cols="100" rows="5" required id="id_text">
+</textarea></div>
+<!-- <textarea name="Text" cols="40" rows="5" class="form__field"  placeholder="Name" name="text" required id="id_text"  ></textarea> -->
+<!-- <center "row"> <button class="btn btn-secondary mt-2"><a href="" style="color: #fff;">Reset</a></button></center> -->
+      <div ><h1>Select Shape:</h1>
+      <ul class="row" id="id_maskType ">
+        
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+        <li>
+              <label style="font-size:30px;" for="id_maskType_2"><input type="radio" name="maskType" value="diamond" required id="id_maskType_0">
+              Dimond shape</label>
+        </li>
+        <li>
+          <label style="font-size:30px;" for="id_maskType_2"><input type="radio" name="maskType" value="square" required id="id_maskType_1">
+              Square shape</label>
+        </li>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+        <li>
+          <label style="font-size:30px;" for="id_maskType_2"><input type="radio" name="maskType" value="heart" required id="id_maskType_2">
+            Heart shape</label>
+        </li>   
+        <li>
+          <label style="font-size:30px;" for="id_maskType_2"><input type="radio" name="maskType" value="female" required id="id_maskType_3">
+            female shape</label>
+        </li>
+        
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+        <li>
+          <label style="font-size:30px;" for="id_maskType_2"><input type="radio" name="maskType" value="male" required id="id_maskType_4">
+            male shape</label>
+        </li>
+        
+        <li>
+          <label style="font-size:30px;" for="id_maskType_2"><input type="radio" name="maskType" value="dog" required id="id_maskType_5">
+            dog shape</label>
+        </li>  
+        
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+      <li>
+          <label style="font-size:30px;" for="id_maskType_2"><input type="radio" name="maskType" value="bike" required id="id_maskType_6">
+              bike shape</label>
+        </li>
+        <li>
+          <label style="font-size:30px;" for="id_maskType_2"><input type="radio" name="maskType" value="car" required id="id_maskType_7">
+              car shape</label>
+        </li>
+        
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+        <li>
+          <label style="font-size:30px;" for="id_maskType_2"><input type="radio" name="maskType" value="cat" required id="id_maskType_8">
+            cat shape</label>
+        </li>  
+        <li>
+          <label style="font-size:30px;" for="id_maskType_2"><input type="radio" name="maskType" value="elephant" required id="id_maskType_9">
+            elephant shape</label>
+        </li>
+        
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+        <li>
+          <label style="font-size:30px;" for="id_maskType_2"><input type="radio" name="maskType" value="emojicrying" required id="id_maskType_10">
+            emoji crying shape</label>
+        </li>
+        <li>
+          <label style="font-size:30px;" for="id_maskType_2"><input type="radio" name="maskType" value="emojihappy" required id="id_maskType_11">
+            emoji happy shape</label>
+        </li>  
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+      
+        <li>
+          <label style="font-size:30px;" for="id_maskType_2"><input type="radio" name="maskType" value="emojiohh" required id="id_maskType_12">
+              emoji ohh shape</label>
+        </li>
+        <li>
+          <label style="font-size:30px;" for="id_maskType_2"><input type="radio" name="maskType" value="emojisad" required id="id_maskType_13">
+              emoji sad shape</label>
+        </li>
+        
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+        <li>
+          <label style="font-size:30px;" for="id_maskType_2"><input type="radio" name="maskType" value="jeep" required id="id_maskType_14">
+            jeep shape</label>
+        </li>  
+        <li>
+          <label style="font-size:30px;" for="id_maskType_2"><input type="radio" name="maskType" value="mouse" required id="id_maskType_15">
+            mouse shape</label>
+        </li>
+        
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+        <li>
+          <label style="font-size:30px;" for="id_maskType_2"><input type="radio" name="maskType" value="plane" required id="id_maskType_16">
+            plane shape</label>
+        </li>
+        <li>
+          <label style="font-size:30px;" for="id_maskType_2"><input type="radio" name="maskType" value="tree" required id="id_maskType_17">
+            tree shape</label>
+        </li>  
+      
+      </ul></div></div>
+      <center>
+        <button type = "submit" >Create Word Cloud </button> 
+      </center>
+  {% endif %}
+</form>
+<div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html> 

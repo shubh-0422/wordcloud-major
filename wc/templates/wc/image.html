@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="background-color:#f7f7f7;">
+		<html background-image = url("a.jpg")>
+		<head>
+			<title>Download | WordCloud</title>
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+					<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+					<link rel="stylesheet" href="{% static 'index.css' %}"">		
+				
+		</head>
+		<body>
+			<nav>
+				<input id="nav-toggle" type="checkbox">
+				<div class="logo">
+					<img src="{% static 'logo.svg' %}">
+				</div>
+				<ul class="links">
+					<li><a class="active" href="/home">Home</a></li>
+					<li><a  href="/aboutus">About us</a></li>
+					<li><a   href="/contact">Contact us</a></li>
+					<li><a href="/create"><button class="heading1">CREATE NOW</button></a></li>
+				</ul>
+				<label for="nav-toggle" class="icon-burger">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</label>
+			</nav>
+	<!-- <h3><a href="">Back</a></h3> -->
+	<h1><B><center>WORD CLOUD</center></B><br></h1>
+	<center><img src="{% static 'pic.png' %}" height="450" width="450"></center>
+	<center>
+
+		<a href ="/static/pic.png"><button>Download Image</button></a>
+	</center>
+</body>
+</html>
